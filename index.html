@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,10 +9,15 @@
         -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- このサイトは何か 説明する場所 -->
-        <meta name="description" content="4cmの紙日記案内ボード">
+        <meta name="description" content="4cmの紙日記ホーム画面です">
+        <link rel="icon" href="img\1539929659204.jpg">
         <!-- タイトルの設定 -->
-        <title>4cmの紙日記案内ボード</title>
+        <title>ホーム画面/紙日記</title>
+        <!-- Bootstrap only -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+        
         <!--スタイルシート-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" />
         <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
     </head>
@@ -39,41 +44,8 @@
                 </div>
 
                 <div class="box-calendar-waku">
-                    <div class="box-calendar-month">
-                        <table border="0">
-                            <tr>
-                                <td>2020年</td><td>August</td><td>8月</td>
-                            </tr>
-                        </table>
-                    </div>
-
-                    <div class="box-calendar-day">
-                        <table border="0">
-                            <tr>
-                                <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td>
-                            </tr>
-
-                            <tr>
-                                <td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td>
-                            </tr>
-
-                            <tr>
-                                <td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td>
-                            </tr>
-
-                            <tr>
-                                <td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td>
-                            </tr>
-
-                            <tr>
-                                <td>29</td><td>30</td><td>31</td>
-                            </tr>
-                        </table>
-                    </div>
-
+                    <div id='calendar'></div>
                 </div>
-
-
                 
             <!-- profile_linkの箱 -->
                 <div class="box-profile_link">洋梨雑貨店</div>
@@ -86,27 +58,46 @@
         <footer class="block-footer">
             <ul class="icon-list">
                 <li>
-                    <a href="">
+                    <a href="https://www.instagram.com/yonashi3/?hl=ja">
                         <img src="img/instagram.svg" alt="インスタアイコン" class="icon-size">
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://www.facebook.com/yonashizakkaten">
                         <img src="img/facebook.svg" alt="フェイスブックアイコン" class="icon-size">
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="https://line.me/R/ti/p/%40848qxhlm">
                         <img src="img/line.svg" alt="ラインアイコン" class="icon-size">
                     </a>
                 </li>
             </ul>
-
-
-
+            
             <p>Copyright @ yonashizakkaten</p>
         </footer>
 
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment-with-locales.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+        <script>
+            $(function(){
+                
+                $('#calendar').datetimepicker({
+                    inline: true,
+                    minDate: "2020-08-26",
+                    maxDate: moment().format("YYYY/MM/DD"),
+                    locale:"ja"
+                });
+                $("#calendar").on("dp.change", function (event) {
+                    console.log(event.date.format("YYYY-MM-DD"));        
+                });
+            
+            })
+            
+        </script>
     </body>
 </html>

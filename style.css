@@ -28,26 +28,67 @@ body {
   height: 200px;
 }
 
-.box-calendar-month {
+.box-profile_link {
+  font-family: "Noto Serif JP", serif;
+  font-size: 30px;
+  margin: 50px 0px 20px 890px;
+}
+
+/*
+*[profile-main]
+*/
+.block-main {
   text-align: center;
 }
 
-table {
-  margin: auto;
-  text-align: center;
+.item-list {
+  width: 100%;
+  max-width: 348px;
+  margin: 0 auto;
 }
 
-.box-calendar-day {
-  list-style: none;
-  text-align: center;
+.item-list b {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.item-list p {
+  font-size: 15px;
+}
+
+.kyokasho {
+  font-family: "Noto serif JP", serif;
+}
+
+.work_coment {
+  font-size: 10px;
   margin-top: 20px;
 }
 
-table td {
-  padding: 3px 5px;
+.image-size {
+  width: 100px;
+  height: auto;
+  border-radius: 50px;
 }
 
-.box-profile_link {
+.ditch {
+  height: 1px;
+  background-color: #efe7e7;
+}
+
+.color-yellow {
+  color: rgb(160, 184, 28);
+  font-size: 10px;
+}
+
+.box-aisatsu {
+  font-family: "Noto Serif JP", serif;
+  font-size: 10px;
+}
+
+.box-index_link {
   font-family: "Noto Serif JP", serif;
   font-size: 30px;
   margin: 20px 0px 20px 890px;
@@ -60,7 +101,7 @@ table td {
   list-style: none;
   width: 100%;
   max-width: 247px;
-  margin: 10px auto;
+  margin: 50px auto 20px;
   padding: 0;
   display: flex;
   justify-content: center;
