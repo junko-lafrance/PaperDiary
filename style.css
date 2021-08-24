@@ -14,6 +14,7 @@ body {
   font-family: "Noto Serif JP", serif;
 }
 
+/*click-info*/
 .box-calendar {
   min-width: 100px;
   text-align: center;
@@ -21,13 +22,51 @@ body {
   margin-bottom: 40px;
 }
 
+/*moji-ban*/
 .box-calendar-waku {
-  margin: auto;
-  text-align: center;
-  width: 200px;
+  /* margin-top: 30px; */
+  padding: 30px;
+  width: 1180px;
   height: 200px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
+.box-calendar-month {
+  text-align: center;
+}
+
+table {
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+}
+
+.box-calendar-day {
+  list-style: none;
+  text-align: center;
+  margin: 20px 80px 30px;
+}
+
+table td {
+  padding: 3px 5px;
+}
+
+/*
+.box-calendar {
+min-width: 100px;
+text-align: center;
+font-size: 12px;
+margin-bottom: 40px;
+}
+
+.box-calendar-waku {
+margin: auto;
+text-align: center;
+width: 200px;
+height: 200px;
+}
+*/
 .box-profile_link {
   font-family: "Noto Serif JP", serif;
   font-size: 30px;
