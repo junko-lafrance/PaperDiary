@@ -26,7 +26,7 @@ body {
 .box-calendar-waku {
   /* margin-top: 30px; */
   padding: 30px;
-  width: 1180px;
+  /* width: 1180px; */
   height: 200px;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -45,7 +45,7 @@ table {
 .box-calendar-day {
   list-style: none;
   text-align: center;
-  margin: 20px 80px 30px;
+  margin: 20px 50px 30px;
 }
 
 table td {
