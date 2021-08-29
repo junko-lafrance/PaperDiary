@@ -167,7 +167,7 @@ height: 200px;
 }
 
 /* sumaho-stylesheet */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 599px) {
   body {
       min-width: 100%;
   }
